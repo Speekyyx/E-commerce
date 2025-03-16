@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0; padding: 0;
+}
+
+.card-container {
+  margin-top: 250px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 3000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbarBrand {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.navbarLogo {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navbarItem {
+  margin-right: 20px;
+}
+
+.navbarLink {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin-right: 20px;
+}
+
+.searchBar {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none;
+}
+
+.searchBarDisplay {
+  display: block;
+}
+
+.navbarLink::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Positionné au centre horizontalement */
+  bottom: 0; /* Positionné au bas du lien */
+  width: 0; /* Largeur initiale de la barre */
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease; /* Transition de la largeur pour un effet fluide */
+  opacity: 0; /* Cacher la barre blanche par défaut */
+}
+
+.navbarLinkHover {
+  width: 100%; /* Augmente la largeur au survol */
+  opacity: 1; /* Rend la barre visible au survol */
+  transform: translateX(-50%); /* Centre la barre horizontalement */
+}
+
+.dropdown-toggle::after {
+  display: none;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+

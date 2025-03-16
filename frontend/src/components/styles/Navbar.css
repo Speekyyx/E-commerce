@@ -1,0 +1,66 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Augmentez le z-index */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ajoutez position: relative; */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+  }
+  
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #ff6700;
+  }
+  
+  /* Style pour la search bar */
+  .search-bar {
+    position: absolute;
+    top: calc(100% + 10px); /* Position en dessous de la navbar */
+    left: 50%; /* Centré horizontalement */
+    transform: translateX(-50%); /* Centré horizontalement */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none; /* Caché par défaut */
+  }
+  
+  .search-bar {
+    display: block; /* Affiche la search bar lorsqu'on survole la navbar */
+  }
+  
+  
